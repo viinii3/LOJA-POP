@@ -1,0 +1,475 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(52, 148, 116);
+}
+
+/*PARA CELULARES*/
+
+@media screen and (max-width: 640px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "menu"
+        "main"
+        "footer"
+        ;
+    }
+
+    header{
+        grid-area: header;
+    }
+
+    header h1{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(65, 104, 91);
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        border-bottom: 2px solid black;
+    }
+
+    .menu{
+        grid-area: menu;
+    }
+
+    .menu > ul{
+        background-color: rgb(65, 104, 91);
+        list-style: none;
+        padding: 20px 20px;
+        margin: 10px 30px;
+        text-align: center;
+    }
+
+    .menu ul li {
+        padding: 10px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #menu-hamburguer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    main h1{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        border-bottom: 2px solid black;
+    }
+
+    .conteudo1{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "imagem"
+        "texto"
+        ;
+    }
+
+    .imagem{
+        grid-area: imagem;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 50px;
+    }
+
+    .texto{
+        grid-area: texto;
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+        padding: 0px 20px;
+    }
+
+    .conteudo2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo2 .imgg{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 7px;
+    }
+
+    .conteudo2 .valor {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        text-decoration: underline;
+    }
+
+    .conteudo2 .texto2{
+        text-align: justify;
+        padding: 20px 100px;
+        padding-bottom: 10px;
+    }
+
+    footer{
+        grid-area: footer;
+        background-color: rgb(65, 104, 91);
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+/*PARA TABLETS*/
+
+@media screen and (min-width: 640px) and (max-width: 1200px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer"
+        ;
+    }
+
+    .menu-hamburguer{
+        display: none;
+    }
+
+    header{
+        grid-area: header;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 30px;
+        background-color: rgb(65, 104, 91);
+    }
+
+    header h1{
+        text-shadow: black 0.1em 0.1em 0.2em;
+        color: white;
+    }
+
+    header .menu ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    header .menu ul li{
+        padding: 0px 20px;
+    }
+
+    header .menu ul li a{
+        text-decoration: none;
+        color: white;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    main h1{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        border-bottom: 2px solid black;
+    }
+
+    .conteudo1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 30px;
+        gap: 20px;
+    }
+
+    .conteudo1 .texto{
+        text-align: justify;
+    }
+
+    .conteudo2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "produto1 produto2"
+        "produto3 produto4"
+        ;
+    }
+
+    .produto1{
+        grid-area: produto1;
+    }
+
+    .produto1 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto1 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .produto1 .valor{
+        text-align: justify;
+    }
+
+    .produto2{
+        grid-area: produto2;
+    }
+
+    .produto2 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto2 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .produto3{
+        grid-area: produto3;
+    }
+
+    .produto3 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto3 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .produto4{
+        grid-area: produto4;
+    }
+
+    .produto4 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto4 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .conteudo2 .valor {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        text-decoration: underline;
+    }
+
+    footer{
+        grid-area: footer;
+        background-color: rgb(65, 104, 91);
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+/*PARA PCS*/
+
+@media screen and (min-width: 1200px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+        ;
+    }
+
+    .imagem-menu{
+        display: none;
+    }
+
+    header{
+        grid-area: header;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 30px;
+        background-color: rgb(65, 104, 91);
+    }
+
+    header h1{
+        text-shadow: black 0.1em 0.1em 0.2em;
+        color: white;
+    }
+
+    header .menu ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    header .menu ul li{
+        padding: 0px 20px;
+    }
+
+    header .menu ul li a{
+        text-decoration: none;
+        color: white;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    main h1{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        border-bottom: 2px solid black;
+    }
+
+    .conteudo1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 30px;
+        gap: 20px;
+    }
+
+    .conteudo1 .texto{
+        text-align: justify;
+    }
+
+    .conteudo2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "produto1 produto2 produto3 produto4"
+        ;
+    }
+
+    .produto1{
+        grid-area: produto1;
+    }
+
+    .produto1 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto1 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .produto1 .valor{
+        text-align: justify;
+    }
+
+    .produto2{
+        grid-area: produto2;
+    }
+
+    .produto2 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto2 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .produto3{
+        grid-area: produto3;
+    }
+
+    .produto3 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto3 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .produto4{
+        grid-area: produto4;
+    }
+
+    .produto4 .imgg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .produto4 p{
+        text-align: justify;
+        margin: 20px 20px; 
+    }
+
+    .conteudo2 .valor {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        text-decoration: underline;
+    }
+
+    footer{
+        grid-area: footer;
+        background-color: rgb(65, 104, 91);
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
